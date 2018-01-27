@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>VirtualSMS</title>
+    <link rel="stylesheet" type="text/css" href="https://portal.coaxpro.mv/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <div id="output"></div>
+    </div>
+    
+  </body>
+  <script>
+      let output = `
+      <h2 class="page-header">VirtualSMS</h2>
+      <img src="./img/favicon.png" style="width: 150px;height: 150px;">
+      <form action="http://localhost:8080" method="post">
+      <input name="username" type="text" value="" class="form-control input-md chat-input" placeholder="username" />
+      </br>
+     <input type="password" name="password" class="form-control input-md chat-input" placeholder="password" />
+     </br>
+     <div class="wrapper">
+     <span class="group-btn">     
+     <button type="submit" class="btn btn-primary btn-md">Login</button>
+
+      </form>
+      `;
+
+      document.getElementById('output').innerHTML = output;
+      
+    </script>
+    <script>
+      // You can also require other files to run in this process
+      require('./renderer.js')
+    </script>
+</html>
